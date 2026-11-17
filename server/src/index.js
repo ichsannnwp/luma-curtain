@@ -12,7 +12,6 @@ import { routes } from './routes.js'
 import { adminRoutes } from './admin-routes.js'
 import { startMqtt, publishCommand } from './mqtt.js'
 import { startAutomaticScheduler } from './automation.js'
-import { startTelegram } from './telegram.js'
 
 await checkDatabase()
 await ensureInitialAdmin()
@@ -47,4 +46,3 @@ app.listen(config.HTTP_PORT, '0.0.0.0', () => {
 
 startMqtt()
 startAutomaticScheduler(publishCommand)
-startTelegram()
