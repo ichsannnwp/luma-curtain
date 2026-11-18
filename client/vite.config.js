@@ -13,6 +13,7 @@ export default defineConfig({
   },
 
   preview: {
+    host: '0.0.0.0',
     allowedHosts: [
       'lumacurtainclient-production.up.railway.app'
     ]
