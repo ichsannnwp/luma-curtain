@@ -17,6 +17,7 @@ await checkDatabase()
 await ensureInitialAdmin()
 
 const app = express()
+app.set('trust proxy', 1)
 app.disable('x-powered-by')
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'same-site' } }))
 app.use(cors({ origin: config.CLIENT_ORIGIN, credentials: true }))
